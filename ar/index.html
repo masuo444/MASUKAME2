@@ -134,9 +134,9 @@
                     </button>
                     <div class="lang-dropdown-menu">
                         <a href="../ar/index.html" class="lang-dropdown-item current">🇸🇦 العربية</a>
-                        <a href="../en/index.html" class="lang-dropdown-item">🇬🇧 English</a>
-                        <a href="../ja/index.html" class="lang-dropdown-item">🇯🇵 日本語</a>
-                        <a href="../fr/index.html" class="lang-dropdown-item">🇫🇷 Français</a>
+                        <a href="../en/index.html" class="lang-dropdown-item" onclick="trackLanguageSwitch('English')">🇬🇧 English</a>
+                        <a href="../ja/index.html" class="lang-dropdown-item" onclick="trackLanguageSwitch('Japanese')">🇯🇵 日本語</a>
+                        <a href="../fr/index.html" class="lang-dropdown-item" onclick="trackLanguageSwitch('French')">🇫🇷 Français</a>
                     </div>
                 </div>
             </nav>
@@ -190,7 +190,7 @@
                     </div>
                 </div>
                 <div class="gallery-cta">
-                    <a href="./purchase.html" class="btn primary large">عرض التفاصيل والطلب</a>
+                    <a href="./purchase.html" class="btn primary large" onclick="trackPurchaseClick()">عرض التفاصيل والطلب</a>
                 </div>
             </div>
         </section>
@@ -251,7 +251,7 @@
                         </div>
                     </div>
                     <div class="cta-button">
-                        <a href="./purchase.html" class="btn primary large">عرض التفاصيل والطلب</a>
+                        <a href="./purchase.html" class="btn primary large" onclick="trackPurchaseClick()">عرض التفاصيل والطلب</a>
                     </div>
                 </div>
             </div>
@@ -337,14 +337,58 @@
         inject();
     </script>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) - Enhanced Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEQ8C7XLMW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-DEQ8C7XLMW');
+        gtag('config', 'G-DEQ8C7XLMW', {
+            allow_google_signals: true,
+            allow_ad_personalization_signals: true,
+            cookie_flags: 'max-age=7200;secure;samesite=none',
+            custom_map: {
+                'custom_parameter_1': 'product_category',
+                'custom_parameter_2': 'price_range'
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            gtag('event', 'page_view', {
+                page_title: 'MASUKAME منحوتة الهينوكي الفاخرة',
+                page_location: window.location.href,
+                content_group1: 'منتجات فاخرة',
+                content_group2: 'الحرفية اليابانية',
+                custom_parameter_1: 'luxury_art',
+                custom_parameter_2: 'premium'
+            });
+        });
+
+        function trackPurchaseClick() {
+            gtag('event', 'begin_checkout', {
+                event_category: 'Luxury Purchase',
+                event_label: 'MASUKAME منحوتة الهينوكي',
+                value: 3000,
+                currency: 'USD'
+            });
+        }
+
+        function trackLanguageSwitch(language) {
+            gtag('event', 'language_change', {
+                event_category: 'User Experience',
+                event_label: language,
+                custom_parameter_1: 'international_luxury_market'
+            });
+        }
+
+        function trackGalleryEngagement(slide_number) {
+            gtag('event', 'gallery_interaction', {
+                event_category: 'Luxury Product Gallery',
+                event_label: 'Slide ' + slide_number,
+                custom_parameter_1: 'craftsmanship_showcase'
+            });
+        }
     </script>
     
     <script src="../assets/app.js"></script>

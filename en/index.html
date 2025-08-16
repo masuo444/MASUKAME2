@@ -160,10 +160,10 @@
                         <span class="lang-dropdown-arrow">▼</span>
                     </button>
                     <div class="lang-dropdown-menu">
-                        <a href="../en/index.html" class="lang-dropdown-item current">🇬🇧 English</a>
-                        <a href="../ja/index.html" class="lang-dropdown-item">🇯🇵 日本語</a>
-                        <a href="../ar/index.html" class="lang-dropdown-item">🇸🇦 العربية</a>
-                        <a href="../fr/index.html" class="lang-dropdown-item">🇫🇷 Français</a>
+                        <a href="../en/index.html" class="lang-dropdown-item current" onclick="trackLanguageSwitch('English')">🇬🇧 English</a>
+                        <a href="../ja/index.html" class="lang-dropdown-item" onclick="trackLanguageSwitch('Japanese')">🇯🇵 日本語</a>
+                        <a href="../ar/index.html" class="lang-dropdown-item" onclick="trackLanguageSwitch('Arabic')">🇸🇦 العربية</a>
+                        <a href="../fr/index.html" class="lang-dropdown-item" onclick="trackLanguageSwitch('French')">🇫🇷 Français</a>
                     </div>
                 </div>
             </nav>
@@ -217,7 +217,7 @@
                     </div>
                 </div>
                 <div class="gallery-cta">
-                    <a href="./purchase.html" class="btn primary large">Order Luxury Japanese Wooden Sculpture</a>
+                    <a href="./purchase.html" class="btn primary large" onclick="trackPurchaseClick()">Order Luxury Japanese Wooden Sculpture</a>
                 </div>
             </div>
         </section>
@@ -278,7 +278,7 @@
                         </div>
                     </div>
                     <div class="cta-button">
-                        <a href="./purchase.html" class="btn primary large">Order Handcrafted Hinoki Sculpture</a>
+                        <a href="./purchase.html" class="btn primary large" onclick="trackPurchaseClick()">Order Handcrafted Hinoki Sculpture</a>
                     </div>
                 </div>
             </div>
@@ -364,14 +364,82 @@
         inject();
     </script>
 
-    <!-- Google tag (gtag.js) - Optimized loading -->
+    <!-- Google tag (gtag.js) - Enhanced Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEQ8C7XLMW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-DEQ8C7XLMW');
+        // Enhanced configuration for luxury product tracking
+        gtag('config', 'G-DEQ8C7XLMW', {
+            // Enhanced measurement settings
+            allow_google_signals: true,
+            allow_ad_personalization_signals: true,
+            cookie_flags: 'max-age=7200;secure;samesite=none',
+            // Custom parameters for luxury tracking
+            custom_map: {
+                'custom_parameter_1': 'product_category',
+                'custom_parameter_2': 'price_range'
+            }
+        });
+
+        // Custom events for luxury user behavior tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track luxury product page view
+            gtag('event', 'page_view', {
+                page_title: 'MASUKAME Luxury Hinoki Sculpture',
+                page_location: window.location.href,
+                content_group1: 'Luxury Products',
+                content_group2: 'Japanese Craftsmanship',
+                custom_parameter_1: 'luxury_art',
+                custom_parameter_2: 'premium'
+            });
+
+            // Track luxury audience engagement
+            gtag('event', 'luxury_audience_view', {
+                event_category: 'Luxury Engagement',
+                event_label: 'High-End Product Page',
+                value: 3000,
+                currency: 'USD'
+            });
+        });
+
+        // Track purchase button clicks
+        function trackPurchaseClick() {
+            gtag('event', 'begin_checkout', {
+                event_category: 'Luxury Purchase',
+                event_label: 'MASUKAME Hinoki Sculpture',
+                value: 3000,
+                currency: 'USD',
+                items: [{
+                    item_id: 'MASUKAME_HINOKI_001',
+                    item_name: 'MASUKAME Luxury Hinoki Wooden Sculpture',
+                    category: 'Luxury Art',
+                    price: 3000,
+                    currency: 'USD',
+                    quantity: 1
+                }]
+            });
+        }
+
+        // Track language switching for international luxury market
+        function trackLanguageSwitch(language) {
+            gtag('event', 'language_change', {
+                event_category: 'User Experience',
+                event_label: language,
+                custom_parameter_1: 'international_luxury_market'
+            });
+        }
+
+        // Track slideshow engagement for luxury gallery
+        function trackGalleryEngagement(slide_number) {
+            gtag('event', 'gallery_interaction', {
+                event_category: 'Luxury Product Gallery',
+                event_label: 'Slide ' + slide_number,
+                custom_parameter_1: 'craftsmanship_showcase'
+            });
+        }
     </script>
 
     <!-- Meta Pixel for luxury audience targeting -->

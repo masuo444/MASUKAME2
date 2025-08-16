@@ -370,6 +370,11 @@ function changeSlide(direction) {
     // Add active class to new slide and indicator
     slides[currentSlideIndex].classList.add('active');
     indicators[currentSlideIndex].classList.add('active');
+    
+    // Track gallery engagement with Google Analytics
+    if (typeof trackGalleryEngagement === 'function') {
+        trackGalleryEngagement(currentSlideIndex + 1);
+    }
 }
 
 function currentSlide(slideIndex) {
@@ -388,6 +393,11 @@ function currentSlide(slideIndex) {
     // Add active class to new slide and indicator
     slides[currentSlideIndex].classList.add('active');
     indicators[currentSlideIndex].classList.add('active');
+    
+    // Track gallery engagement with Google Analytics
+    if (typeof trackGalleryEngagement === 'function') {
+        trackGalleryEngagement(slideIndex);
+    }
 }
 
 // Auto-advance slideshow
