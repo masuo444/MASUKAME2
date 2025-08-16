@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASUKAME - Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=./ja/index.html">
+    <script type="text/javascript">
+        // Browser language detection and redirect
+        const browserLang = navigator.language || navigator.userLanguage;
+        const lang = browserLang.toLowerCase().substring(0, 2);
+        
+        // Redirect based on browser language
+        if (lang === 'ja') {
+            window.location.href = './ja/index.html';
+        } else if (lang === 'ar') {
+            window.location.href = './ar/index.html';
+        } else if (lang === 'fr') {
+            window.location.href = './fr/index.html';
+        } else {
+            // Default to English for all other languages
+            window.location.href = './en/index.html';
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>MASUKAME</h1>
+        <p>Redirecting to your language...</p>
+        <p>リダイレクト中...</p>
+        <hr style="margin: 30px auto; width: 200px;">
+        <p>If you are not redirected automatically, please choose your language:</p>
+        <p>自動的にリダイレクトされない場合は、言語を選択してください：</p>
+        <div style="margin-top: 30px;">
+            <a href="./ja/index.html" style="margin: 10px; padding: 10px 20px; background: #c9a227; color: white; text-decoration: none; border-radius: 5px; display: inline-block;">日本語</a>
+            <a href="./en/index.html" style="margin: 10px; padding: 10px 20px; background: #c9a227; color: white; text-decoration: none; border-radius: 5px; display: inline-block;">English</a>
+            <a href="./ar/index.html" style="margin: 10px; padding: 10px 20px; background: #c9a227; color: white; text-decoration: none; border-radius: 5px; display: inline-block;">العربية</a>
+            <a href="./fr/index.html" style="margin: 10px; padding: 10px 20px; background: #c9a227; color: white; text-decoration: none; border-radius: 5px; display: inline-block;">Français</a>
+        </div>
+    </div>
+</body>
+</html>
