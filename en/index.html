@@ -40,8 +40,10 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/app.css">
+    <link rel="preload" href="../assets/hero-new.jpg" as="image" fetchpriority="high">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -171,7 +173,7 @@
     <main>
         <section class="hero">
             <div class="container">
-                <img src="../assets/hero-new.jpg" alt="MASUKAME luxury wooden sculpture - Hinoki carving in natural setting" class="hero-image" loading="lazy">
+                <img src="../assets/hero-new.jpg" alt="MASUKAME luxury wooden sculpture - Hinoki carving in natural setting" class="hero-image" loading="eager" fetchpriority="high">
             </div>
         </section>
 
@@ -356,7 +358,13 @@
         </div>
     </footer>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Vercel Speed Insights -->
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    
+    <!-- Google tag (gtag.js) - Optimized loading -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEQ8C7XLMW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
