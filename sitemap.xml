@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English (Primary) -->
+  <url>
+    <loc>https://masukame.fomusglobal.com/en/</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masukame.fomusglobal.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masukame.fomusglobal.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masukame.fomusglobal.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masukame.fomusglobal.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://masukame.fomusglobal.com/en/"/>
+  </url>
+  
+  <url>
+    <loc>https://masukame.fomusglobal.com/en/purchase.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masukame.fomusglobal.com/en/purchase.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masukame.fomusglobal.com/ja/purchase.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masukame.fomusglobal.com/ar/purchase.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masukame.fomusglobal.com/fr/purchase.html"/>
+  </url>
+  
+  <url>
+    <loc>https://masukame.fomusglobal.com/en/story.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masukame.fomusglobal.com/en/story.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masukame.fomusglobal.com/ja/story.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masukame.fomusglobal.com/ar/story.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masukame.fomusglobal.com/fr/story.html"/>
+  </url>
+  
+  <url>
+    <loc>https://masukame.fomusglobal.com/en/faq.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masukame.fomusglobal.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masukame.fomusglobal.com/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masukame.fomusglobal.com/ar/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masukame.fomusglobal.com/fr/faq.html"/>
+  </url>
+  
+  <!-- Japanese -->
+  <url>
+    <loc>https://masukame.fomusglobal.com/ja/</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://masukame.fomusglobal.com/ja/purchase.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://masukame.fomusglobal.com/ja/story.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Arabic -->
+  <url>
+    <loc>https://masukame.fomusglobal.com/ar/</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://masukame.fomusglobal.com/ar/purchase.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://masukame.fomusglobal.com/ar/story.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- French -->
+  <url>
+    <loc>https://masukame.fomusglobal.com/fr/</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://masukame.fomusglobal.com/fr/purchase.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://masukame.fomusglobal.com/fr/story.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

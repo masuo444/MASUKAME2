@@ -1,0 +1,61 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://masukame.fomusglobal.com/sitemap.xml
+
+# High priority pages for luxury brand SEO
+Allow: /en/
+Allow: /ja/
+Allow: /ar/
+Allow: /fr/
+Allow: /en/purchase.html
+Allow: /en/story.html
+Allow: /en/faq.html
+
+# Block access to system files
+Disallow: /.git/
+Disallow: /.DS_Store
+Disallow: /node_modules/
+Disallow: *.log
+Disallow: /vercel.json
+
+# Allow crawling of all images for rich snippets
+Allow: /assets/*.jpg
+Allow: /assets/*.jpeg
+Allow: /assets/*.png
+Allow: /assets/*.gif
+Allow: /assets/*.svg
+Allow: /assets/*.webp
+Allow: /images/*.jpg
+Allow: /images/*.jpeg
+Allow: /images/*.png
+Allow: /images/*.gif
+Allow: /images/*.JPG
+
+# Specific bot optimizations for luxury market
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yandexbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 3
+
+# Social media bots for luxury brand visibility
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

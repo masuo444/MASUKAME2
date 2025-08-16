@@ -654,6 +654,93 @@
         </div>
     </footer>
 
+    <!-- Google Analytics 4 for Purchase Page -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEQ8C7XLMW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-DEQ8C7XLMW', {
+            'page_title': 'MASUKAME Purchase - Luxury Hinoki Sculpture',
+            'content_group1': 'Purchase Flow',
+            'content_group2': 'High Value Products'
+        });
+
+        // Track purchase intent - high value event
+        gtag('event', 'view_item', {
+            'event_category': 'luxury_purchase_intent',
+            'event_label': 'purchase_page_view',
+            'currency': 'USD',
+            'value': 3000,
+            'items': [{
+                'item_id': 'MASUKAME_HINOKI_001',
+                'item_name': 'MASUKAME Luxury Hinoki Wooden Sculpture',
+                'item_category': 'Luxury Art',
+                'item_category2': 'Japanese Craftsmanship',
+                'price': 3000,
+                'currency': 'USD',
+                'quantity': 1
+            }]
+        });
+
+        // Track contact form interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track email clicks as conversion events
+            const emailLinks = document.querySelectorAll('a[href^="mailto"]');
+            emailLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'luxury_conversion',
+                        'event_label': 'purchase_inquiry',
+                        'currency': 'USD',
+                        'value': 3000
+                    });
+                    
+                    // Meta Pixel conversion
+                    fbq('track', 'Lead', {
+                        content_name: 'MASUKAME Purchase Inquiry',
+                        content_category: 'Luxury Art',
+                        value: 3000,
+                        currency: 'USD'
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Meta Pixel for Purchase Page -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+        
+        // Track purchase intent
+        fbq('track', 'InitiateCheckout', {
+            content_name: 'MASUKAME Hinoki Sculpture',
+            content_category: 'Luxury Art',
+            content_ids: ['MASUKAME_HINOKI_001'],
+            content_type: 'product',
+            value: 3000,
+            currency: 'USD'
+        });
+
+        // Custom event for high-value purchase intent
+        fbq('trackCustom', 'LuxuryPurchaseIntent', {
+            product_name: 'MASUKAME',
+            price_point: 'premium',
+            customer_segment: 'luxury_collectors'
+        });
+    </script>
+
     <script src="../assets/app.js"></script>
 </body>
 </html>
