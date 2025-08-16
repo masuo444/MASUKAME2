@@ -331,8 +331,21 @@
         </div>
     </footer>
 
-    <!-- GA4 placeholder -->
-    <!-- Meta Pixel placeholder -->
+    <!-- Vercel Speed Insights -->
+    <script type="module">
+        import { inject } from '@vercel/speed-insights';
+        inject();
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEQ8C7XLMW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DEQ8C7XLMW');
+    </script>
     
     <script src="../assets/app.js"></script>
 </body>
