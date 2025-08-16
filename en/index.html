@@ -356,50 +356,14 @@
         </div>
     </footer>
 
-    <!-- Google Analytics 4 -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEQ8C7XLMW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        
-        // Enhanced configuration for luxury brand tracking
-        gtag('config', 'G-DEQ8C7XLMW', {
-            'custom_map': {
-                'custom_parameter_1': 'product_interest',
-                'custom_parameter_2': 'luxury_segment'
-            },
-            'enhanced_ecommerce': true,
-            'page_title': 'MASUKAME - Luxury Hinoki Sculpture',
-            'page_location': window.location.href,
-            'content_group1': 'Luxury Products',
-            'content_group2': 'Japanese Craftsmanship'
-        });
 
-        // Track luxury customer engagement
-        gtag('event', 'page_view', {
-            'event_category': 'luxury_engagement',
-            'event_label': 'homepage_view',
-            'custom_parameter_1': 'high_intent',
-            'custom_parameter_2': 'affluent_visitor'
-        });
-
-        // Enhanced ecommerce for luxury products
-        gtag('event', 'view_item', {
-            'currency': 'USD',
-            'value': 3000,
-            'items': [{
-                'item_id': 'MASUKAME_HINOKI_001',
-                'item_name': 'MASUKAME Luxury Hinoki Wooden Sculpture',
-                'item_category': 'Luxury Art',
-                'item_category2': 'Japanese Craftsmanship',
-                'item_category3': 'Wooden Sculpture',
-                'item_brand': 'MASUKAME',
-                'price': 3000,
-                'currency': 'USD',
-                'quantity': 1
-            }]
-        });
+        gtag('config', 'G-DEQ8C7XLMW');
     </script>
 
     <!-- Meta Pixel for luxury audience targeting -->
