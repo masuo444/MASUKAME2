@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire - MASUKAME | Sculpture Luxueuse en Bois de Hinoki</title>
+    <meta name="description" content="L'histoire de la naissance de MASUKAME. Le concept, la philosophie artisanale et le choix des matériaux de la sculpture en bois qui unit les motifs Masu et Kame.">
+    <meta property="og:title" content="Histoire MASUKAME - Sculpture Luxueuse en Bois de Hinoki">
+    <meta property="og:description" content="Où Masu (prospérité) rencontre Kame (longévité). La naissance et l'artisanat de MASUKAME.">
+    <meta property="og:image" content="../assets/ogp.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/app.css">
+    <style>
+        .story-hero {
+            height: 60vh;
+            background-image: url('../assets/hero-new.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .story-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(0, 0, 0, 0.4) 0%, 
+                rgba(0, 0, 0, 0.2) 50%,
+                rgba(0, 0, 0, 0.4) 100%);
+        }
+        
+        .story-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 56px;
+            font-weight: 300;
+            color: white;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.05em;
+        }
+        
+        .story-content {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--ivory) 0%, white 50%, var(--ivory) 100%);
+        }
+        
+        .story-section {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .story-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .story-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .story-text {
+            font-size: 18px;
+            line-height: 2;
+            color: #333;
+            text-align: justify;
+            margin-bottom: 32px;
+        }
+        
+        .story-text strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+        
+        .story-text em {
+            color: var(--gold);
+            font-style: normal;
+            font-weight: 500;
+        }
+        
+        .story-image {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            margin: 40px auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .story-image:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .philosophy {
+            background: white;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            margin: 60px 0;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .philosophy h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .philosophy p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .material-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .material-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .material-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .material-card h4 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--ink);
+        }
+        
+        .material-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            padding: 40px 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            height: 100%;
+            border-top: 3px solid var(--gold);
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 12px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .timeline-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--ink);
+        }
+        
+        .timeline-text {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .story-hero h1 {
+                font-size: 36px;
+            }
+            
+            .story-section h2 {
+                font-size: 28px;
+            }
+            
+            .story-text {
+                font-size: 16px;
+                text-align: left;
+            }
+            
+            .philosophy {
+                padding: 40px 30px;
+            }
+            
+            .materials-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .timeline {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="./index.html" class="logo">MASUKAME</a>
+            <nav>
+                <a href="./index.html">ACCUEIL</a>
+                <a href="./story.html" class="active">HISTOIRE</a>
+                <a href="./purchase.html">ACHETER</a>
+                <a href="https://www.instagram.com/masukame_official/" target="_blank" rel="noopener noreferrer" class="instagram-link">Instagram</a>
+                <div class="lang-dropdown">
+                    <button class="lang-dropdown-btn">
+                        Français
+                        <span class="lang-dropdown-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown-menu">
+                        <a href="../fr/story.html" class="lang-dropdown-item current">Français</a>
+                        <a href="../en/story.html" class="lang-dropdown-item">English</a>
+                        <a href="../ja/story.html" class="lang-dropdown-item">日本語</a>
+                        <a href="../ar/story.html" class="lang-dropdown-item">العربية</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="story-hero">
+            <h1>L'Histoire de MASUKAME</h1>
+        </section>
+
+        <section class="story-content">
+            <div class="story-section">
+                <h2>Naissance d'une Idée</h2>
+                <p class="story-text">
+                    MASUKAME est une sculpture en bois sur commande qui unit deux motifs japonais de bon augure : <strong>Masu</strong> - la boîte en bois traditionnelle historiquement liée à <em>l'augmentation</em> et à la prospérité - et <strong>Kame</strong>, la tortue symbolisant la longévité. Chaque pièce équilibre la géométrie tranquille du masu avec des membres délicatement modelés et un cou posé, créant une <em>sculpture de caractère</em> qui semble à la fois intemporelle et contemporaine.
+                </p>
+                
+                <img src="../assets/hero-new.jpg" alt="Processus de création MASUKAME" class="story-image">
+                
+                <div class="philosophy">
+                    <h3>Philosophie Artisanale</h3>
+                    <p>"Beauté qui perdure dans le silence"<br>
+                    Créer des objets de vraie valeur qui transcendent le temps et continuent d'être chéris</p>
+                </div>
+            </div>
+
+            <div class="story-section">
+                <h2>Dévotion aux Matériaux</h2>
+                <div class="materials-grid">
+                    <div class="material-card">
+                        <span class="material-icon">🌲</span>
+                        <h4>Cyprès Hinoki</h4>
+                        <p>Cyprès japonais sacré vénéré depuis les temps anciens. Son grain fin et son parfum délicat donnent vie à MASUKAME.</p>
+                    </div>
+                    <div class="material-card">
+                        <span class="material-icon">🎨</span>
+                        <h4>Artisanat d'Artisan</h4>
+                        <p>Chaque pièce sculptée à la main par des maîtres artisans. Obtenir chaleur et caractère impossible avec les machines.</p>
+                    </div>
+                    <div class="material-card">
+                        <span class="material-icon">📿</span>
+                        <h4>Patrimoine Traditionnel</h4>
+                        <p>Les motifs classiques masu et kame reçoivent une interprétation contemporaine, créant une nouvelle valeur culturelle.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-section">
+                <h2>Voyage de Création</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Concept</div>
+                            <div class="timeline-title">Masu Rencontre Kame</div>
+                            <div class="timeline-text">La vision a émergé d'unir prospérité et longévité en une seule forme.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Design</div>
+                            <div class="timeline-title">Exploration de Forme</div>
+                            <div class="timeline-text">Recherche de l'équilibre optimal entre géométrie cubique masu et éléments organiques de tortue.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Matériau</div>
+                            <div class="timeline-title">Choix du Hinoki</div>
+                            <div class="timeline-text">Sélectionné pour son parfum, son grain et sa durabilité. La signification sacrée était également importante.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Achèvement</div>
+                            <div class="timeline-title">Naissance de MASUKAME</div>
+                            <div class="timeline-text">Dans sa présence modeste de 10cm, MASUKAME incarne une signification et une beauté profondes.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <h4>MASUKAME</h4>
+                    <p>Sculpture luxueuse en bois sur commande<br>fusionnant Masu (prospérité) et Kame (longévité)</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/masukame_official/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:fomus.official@gmail.com">fomus.official@gmail.com</a></li>
+                        <li><a href="./purchase.html">Acheter</a></li>
+                        <li><a href="./story.html">Histoire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Informations Légales</h4>
+                    <ul>
+                        <li><a href="./terms.html">Conditions de Service</a></li>
+                        <li><a href="./privacy.html">Politique de Confidentialité</a></li>
+                        <li>Retours & Remboursements</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="currency">Tous les prix sont affichés en USD.</p>
+                <p class="copyright">&copy; <span id="year">2025</span> MASUKAME. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+</body>
+</html>

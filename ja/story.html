@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ストーリー - MASUKAME | 檜の高級木彫オブジェ</title>
+    <meta name="description" content="MASUKAMEの誕生秘話。枡と亀を融合した木彫オブジェのコンセプト、制作哲学、檜の素材選択について。">
+    <meta property="og:title" content="MASUKAME ストーリー - 檜が香る、吉祥の彫刻">
+    <meta property="og:description" content="枡（繁栄）と亀（長寿）が出会う場所。MASUKAMEの誕生とクラフトマンシップ。">
+    <meta property="og:image" content="../assets/ogp.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/app.css">
+    <style>
+        .story-hero {
+            height: 60vh;
+            background-image: url('../assets/hero-new.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .story-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(0, 0, 0, 0.4) 0%, 
+                rgba(0, 0, 0, 0.2) 50%,
+                rgba(0, 0, 0, 0.4) 100%);
+        }
+        
+        .story-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 56px;
+            font-weight: 300;
+            color: white;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.05em;
+        }
+        
+        .story-content {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--ivory) 0%, white 50%, var(--ivory) 100%);
+        }
+        
+        .story-section {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .story-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .story-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .story-text {
+            font-size: 18px;
+            line-height: 2;
+            color: #333;
+            text-align: justify;
+            margin-bottom: 32px;
+        }
+        
+        .story-text strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+        
+        .story-text em {
+            color: var(--gold);
+            font-style: normal;
+            font-weight: 500;
+        }
+        
+        .story-image {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            margin: 40px auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .story-image:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .philosophy {
+            background: white;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            margin: 60px 0;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .philosophy h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .philosophy p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .material-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .material-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .material-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .material-card h4 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--ink);
+        }
+        
+        .material-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            padding: 40px 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            height: 100%;
+            border-top: 3px solid var(--gold);
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 12px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .timeline-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--ink);
+        }
+        
+        .timeline-text {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .story-hero h1 {
+                font-size: 36px;
+            }
+            
+            .story-section h2 {
+                font-size: 28px;
+            }
+            
+            .story-text {
+                font-size: 16px;
+                text-align: left;
+            }
+            
+            .philosophy {
+                padding: 40px 30px;
+            }
+            
+            .materials-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .timeline {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="./index.html" class="logo">MASUKAME</a>
+            <nav>
+                <a href="./index.html">ホーム</a>
+                <a href="./story.html" class="active">ストーリー</a>
+                <a href="./purchase.html">購入</a>
+                <a href="https://www.instagram.com/masukame_official/" target="_blank" rel="noopener noreferrer" class="instagram-link">Instagram</a>
+                <div class="lang-dropdown">
+                    <button class="lang-dropdown-btn">
+                        日本語
+                        <span class="lang-dropdown-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown-menu">
+                        <a href="../ja/story.html" class="lang-dropdown-item current">日本語</a>
+                        <a href="../en/story.html" class="lang-dropdown-item">English</a>
+                        <a href="../ar/story.html" class="lang-dropdown-item">العربية</a>
+                        <a href="../fr/story.html" class="lang-dropdown-item">Français</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="story-hero">
+            <h1>MASUKAMEの物語</h1>
+        </section>
+
+        <section class="story-content">
+            <div class="story-section">
+                <h2>誕生の物語</h2>
+                <p class="story-text">
+                    MASUKAMEは、日本の吉兆モチーフである<strong>枡（益＝繁栄）</strong>と<strong>亀（長寿）</strong>を一体化した、完全受注生産の木彫オブジェです。枡の静かな立方体に、やわらかな手足と首の造形を重ね、古典と現代性を同居させた<em>キャラクター彫刻</em>として仕立てています。
+                </p>
+                
+                <img src="../assets/hero-new.jpg" alt="MASUKAME 制作風景" class="story-image">
+                
+                <div class="philosophy">
+                    <h3>制作哲学</h3>
+                    <p>「静寂の中に宿る、永続する美しさ」<br>
+                    時代を超えて愛され続ける、真の価値を持つオブジェを創造する</p>
+                </div>
+            </div>
+
+            <div class="story-section">
+                <h2>素材への想い</h2>
+                <div class="materials-grid">
+                    <div class="material-card">
+                        <span class="material-icon">🌲</span>
+                        <h4>檜（ヒノキ）</h4>
+                        <p>日本古来より神聖視される檜。その細やかな木目とほのかな香りが、MASUKAMEに命を吹き込みます。</p>
+                    </div>
+                    <div class="material-card">
+                        <span class="material-icon">🎨</span>
+                        <h4>職人の技</h4>
+                        <p>一つひとつ手作業で彫り上げる匠の技術。機械では表現できない、温かみのある仕上がりを実現。</p>
+                    </div>
+                    <div class="material-card">
+                        <span class="material-icon">📿</span>
+                        <h4>伝統の継承</h4>
+                        <p>古典的な枡と亀のモチーフに現代的な解釈を加え、新しい価値を創造しています。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-section">
+                <h2>制作の歩み</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">コンセプト</div>
+                            <div class="timeline-title">枡と亀の融合</div>
+                            <div class="timeline-text">繁栄と長寿という二つの願いを一つの形に込める発想が生まれました。</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">デザイン</div>
+                            <div class="timeline-title">形状の探求</div>
+                            <div class="timeline-text">立方体の枡に有機的な亀の要素を融合させる、最適なバランスを追求。</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">素材選択</div>
+                            <div class="timeline-title">檜への決定</div>
+                            <div class="timeline-text">香り、木目、耐久性すべてを兼ね備えた檜を選択。神聖な意味も重要な要素でした。</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">完成</div>
+                            <div class="timeline-title">MASUKAME誕生</div>
+                            <div class="timeline-text">約10cmの小さな佇まいに、深い意味と美しさを込めたMASUKAMEが完成しました。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <h4>MASUKAME</h4>
+                    <p>枡（繁栄）と亀（長寿）を融合した<br>完全受注生産の高級木彫オブジェ</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/masukame_official/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>お問い合わせ</h4>
+                    <ul>
+                        <li><a href="mailto:fomus.official@gmail.com">fomus.official@gmail.com</a></li>
+                        <li><a href="./purchase.html">購入について</a></li>
+                        <li><a href="./story.html">ストーリー</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>法的情報</h4>
+                    <ul>
+                        <li><a href="./terms.html">利用規約</a></li>
+                        <li><a href="./privacy.html">プライバシーポリシー</a></li>
+                        <li>特定商取引法に基づく表記</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="currency">すべての価格はUSD表示です。</p>
+                <p class="copyright">&copy; <span id="year">2025</span> MASUKAME. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+</body>
+</html>

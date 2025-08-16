@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القصة - MASUKAME | تمثال خشبي فاخر من الهينوكي</title>
+    <meta name="description" content="قصة ولادة MASUKAME. مفهوم ونحت وفلسفة اختيار مواد التمثال الخشبي الذي يوحد رموز ماسو وكامي.">
+    <meta property="og:title" content="قصة MASUKAME - تمثال خشبي فاخر من الهينوكي">
+    <meta property="og:description" content="حيث يلتقي ماسو (الازدهار) مع كامي (طول العمر). ولادة وحرفية MASUKAME.">
+    <meta property="og:image" content="../assets/ogp.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/app.css">
+    <style>
+        .story-hero {
+            height: 60vh;
+            background-image: url('../assets/hero-new.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .story-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(0, 0, 0, 0.4) 0%, 
+                rgba(0, 0, 0, 0.2) 50%,
+                rgba(0, 0, 0, 0.4) 100%);
+        }
+        
+        .story-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 56px;
+            font-weight: 300;
+            color: white;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.05em;
+        }
+        
+        .story-content {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--ivory) 0%, white 50%, var(--ivory) 100%);
+        }
+        
+        .story-section {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .story-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .story-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .story-text {
+            font-size: 18px;
+            line-height: 2;
+            color: #333;
+            text-align: justify;
+            margin-bottom: 32px;
+        }
+        
+        .story-text strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+        
+        .story-text em {
+            color: var(--gold);
+            font-style: normal;
+            font-weight: 500;
+        }
+        
+        .story-image {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            margin: 40px auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .story-image:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .philosophy {
+            background: white;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            margin: 60px 0;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .philosophy h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .philosophy p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .material-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .material-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .material-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .material-card h4 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--ink);
+        }
+        
+        .material-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            padding: 40px 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            height: 100%;
+            border-top: 3px solid var(--gold);
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 12px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .timeline-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--ink);
+        }
+        
+        .timeline-text {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .story-hero h1 {
+                font-size: 36px;
+            }
+            
+            .story-section h2 {
+                font-size: 28px;
+            }
+            
+            .story-text {
+                font-size: 16px;
+                text-align: left;
+            }
+            
+            .philosophy {
+                padding: 40px 30px;
+            }
+            
+            .materials-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .timeline {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="./index.html" class="logo">MASUKAME</a>
+            <nav>
+                <a href="./index.html">الرئيسية</a>
+                <a href="./story.html" class="active">القصة</a>
+                <a href="./purchase.html">الشراء</a>
+                <a href="https://www.instagram.com/masukame_official/" target="_blank" rel="noopener noreferrer" class="instagram-link">Instagram</a>
+                <div class="lang-dropdown">
+                    <button class="lang-dropdown-btn">
+                        العربية
+                        <span class="lang-dropdown-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown-menu">
+                        <a href="../ar/story.html" class="lang-dropdown-item current">العربية</a>
+                        <a href="../en/story.html" class="lang-dropdown-item">English</a>
+                        <a href="../ja/story.html" class="lang-dropdown-item">日本語</a>
+                        <a href="../fr/story.html" class="lang-dropdown-item">Français</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="story-hero">
+            <h1>قصة MASUKAME</h1>
+        </section>
+
+        <section class="story-content">
+            <div class="story-section">
+                <h2>ولادة فكرة</h2>
+                <p class="story-text">
+                    MASUKAME هو تمثال خشبي مصنوع حسب الطلب يوحد بين رمزين يابانيين ميمونين: <strong>ماسو</strong> - الصندوق الخشبي التقليدي المرتبط تاريخياً <em>بالزيادة</em> والازدهار - و <strong>كامي</strong>، السلحفاة التي ترمز لطول العمر. كل قطعة توازن بين الهندسة الهادئة لماسو والأطراف المنحوتة بلطف والرقبة المتوازنة، مما يخلق <em>تمثالاً شخصياً</em> يبدو خالداً وعصرياً في آن واحد.
+                </p>
+                
+                <img src="../assets/hero-new.jpg" alt="عملية صنع MASUKAME" class="story-image">
+                
+                <div class="philosophy">
+                    <h3>فلسفة الحرفة</h3>
+                    <p>"الجمال الذي يدوم في صمت"<br>
+                    خلق أشياء ذات قيمة حقيقية تتجاوز الزمن وتستمر في أن تكون محبوبة</p>
+                </div>
+            </div>
+
+            <div class="story-section">
+                <h2>تفاني في المواد</h2>
+                <div class="materials-grid">
+                    <div class="material-card">
+                        <span class="material-icon">🌲</span>
+                        <h4>سرو الهينوكي</h4>
+                        <p>سرو ياباني مقدس محترم منذ العصور القديمة. حبيباته الناعمة وعطره اللطيف يبث الحياة في MASUKAME.</p>
+                    </div>
+                    <div class="material-card">
+                        <span class="material-icon">🎨</span>
+                        <h4>حرفة الحرفيين</h4>
+                        <p>كل قطعة منحوتة يدوياً بواسطة حرفيين ماهرين. تحقيق دفء وشخصية مستحيلة مع الآلات.</p>
+                    </div>
+                    <div class="material-card">
+                        <span class="material-icon">📿</span>
+                        <h4>التراث التقليدي</h4>
+                        <p>رموز ماسو وكامي الكلاسيكية تتلقى تفسيراً معاصراً، مما يخلق قيمة ثقافية جديدة.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-section">
+                <h2>رحلة الإبداع</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">المفهوم</div>
+                            <div class="timeline-title">ماسو يلتقي كامي</div>
+                            <div class="timeline-text">ظهرت الرؤية لتوحيد الازدهار وطول العمر في شكل واحد.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">التصميم</div>
+                            <div class="timeline-title">استكشاف الشكل</div>
+                            <div class="timeline-text">السعي للتوازن الأمثل بين هندسة ماسو المكعبة وعناصر السلحفاة العضوية.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">المادة</div>
+                            <div class="timeline-title">اختيار الهينوكي</div>
+                            <div class="timeline-text">تم اختياره لعطره وحبيباته ومتانته. المعنى المقدس كان مهماً بنفس القدر.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">الإكمال</div>
+                            <div class="timeline-title">ولادة MASUKAME</div>
+                            <div class="timeline-text">في حضوره المتواضع بحجم 10 سم، يجسد MASUKAME معنى وجمالاً عميقين.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <h4>MASUKAME</h4>
+                    <p>تمثال خشبي فاخر مصنوع حسب الطلب<br>يدمج ماسو (الازدهار) وكامي (طول العمر)</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/masukame_official/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>اتصل بنا</h4>
+                    <ul>
+                        <li><a href="mailto:fomus.official@gmail.com">fomus.official@gmail.com</a></li>
+                        <li><a href="./purchase.html">الشراء</a></li>
+                        <li><a href="./story.html">القصة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>المعلومات القانونية</h4>
+                    <ul>
+                        <li><a href="./terms.html">شروط الخدمة</a></li>
+                        <li><a href="./privacy.html">سياسة الخصوصية</a></li>
+                        <li>الإرجاع والاسترداد</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="currency">جميع الأسعار معروضة بالدولار الأمريكي.</p>
+                <p class="copyright">&copy; <span id="year">2025</span> MASUKAME. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acheter - MASUKAME | Sculpture Luxueuse en Bois de Hinoki</title>
+    <meta name="description" content="Page d'achat MASUKAME sculpture luxueuse en bois. Fusion sur commande des motifs Masu et Kame. 3 000 USD.">
+    <meta property="og:title" content="Achat MASUKAME - Sculpture Luxueuse en Bois">
+    <meta property="og:description" content="Où Masu (prospérité) rencontre Kame (longévité). Sur commande en hinoki.">
+    <meta property="og:image" content="../assets/ogp.jpg">
+    <meta property="og:type" content="product">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/app.css">
+    <style>
+        .purchase-hero {
+            height: calc(100vh - 100px);
+            display: flex;
+            align-items: center;
+            padding: 5rem 1rem 3rem 1rem;
+            background: linear-gradient(135deg, var(--ivory) 0%, white 50%, var(--warm) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .purchase-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(201, 162, 39, 0.05) 0%, transparent 70%);
+            animation: pulse 20s ease-in-out infinite;
+        }
+        
+        .intro-content-premium {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .intro-title-premium {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: 0.1em;
+        }
+        
+        .title-accent {
+            color: var(--gold);
+        }
+        
+        .title-main {
+            color: var(--ink);
+        }
+        
+        .intro-subtitle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .subtitle-line {
+            height: 1px;
+            width: 80px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        
+        .intro-tagline-premium {
+            font-size: 1.4rem;
+            color: var(--muted);
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        
+        .intro-description-premium {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .description-primary {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .description-secondary {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--muted);
+        }
+        
+        .intro-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            opacity: 0.1;
+        }
+        
+        .pattern-element {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            animation: float 15s ease-in-out infinite;
+        }
+        
+        .pattern-1 { top: 10%; left: 10%; animation-delay: 0s; }
+        .pattern-2 { top: 20%; right: 15%; animation-delay: 3s; }
+        .pattern-3 { bottom: 30%; left: 20%; animation-delay: 6s; }
+        .pattern-4 { bottom: 20%; right: 10%; animation-delay: 9s; }
+        .pattern-5 { top: 50%; left: 5%; animation-delay: 12s; }
+        .pattern-6 { top: 40%; right: 5%; animation-delay: 15s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.1); }
+        }
+        
+        .product-section {
+            padding: 4rem 0;
+            background: var(--warm);
+        }
+        
+        .product-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            border: 2px solid var(--gold);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .product-image-container {
+            text-align: center;
+        }
+        
+        .product-image {
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+        
+        .product-image:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .product-info {
+            text-align: center;
+        }
+        
+        .edition-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 0.5rem;
+            color: var(--gold);
+            position: relative;
+        }
+        
+        .edition-title::before {
+            content: '▸';
+            margin-right: 0.5rem;
+        }
+        
+        .edition-subtitle {
+            font-size: 1rem;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+        
+        .price-container {
+            margin-bottom: 2rem;
+        }
+        
+        .main-price {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--ink);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .member-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .product-description {
+            margin-bottom: 2rem;
+        }
+        
+        .description-main {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .description-note {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--muted);
+        }
+        
+        .features-box {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.7);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+        }
+        
+        .features-title {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .features-list {
+            margin: 0;
+            padding-left: 1.2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: left;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features-list li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        
+        .purchase-button {
+            margin-top: 2rem;
+        }
+        
+        .order-flow-section {
+            padding: 4rem 0;
+            background: linear-gradient(180deg, white 0%, var(--ivory) 100%);
+        }
+        
+        .flow-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .flow-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 1rem;
+            color: var(--gold);
+            position: relative;
+        }
+        
+        .flow-title::before {
+            content: '▸';
+            margin-right: 0.5rem;
+        }
+        
+        .flow-subtitle {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            color: var(--muted);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+        
+        .flow-steps {
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            text-align: left;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(201, 162, 39, 0.1);
+            transition: var(--transition);
+        }
+        
+        .flow-step:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .step-number {
+            background: var(--gold);
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            min-width: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .step-content h4 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .step-content p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--muted);
+        }
+        
+        .contact-section {
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(201, 162, 39, 0.2);
+        }
+        
+        .contact-title {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        .contact-description {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .purchase-hero {
+                height: auto;
+                padding: 3rem 1rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .product-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .flow-step {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .intro-subtitle-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .subtitle-line {
+                width: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="./index.html" class="logo">MASUKAME</a>
+            <nav>
+                <a href="./index.html">ACCUEIL</a>
+                <a href="./story.html">HISTOIRE</a>
+                <a href="./purchase.html" class="active">ACHETER</a>
+                <a href="https://www.instagram.com/masukame_official/" target="_blank" rel="noopener noreferrer" class="instagram-link">Instagram</a>
+                <div class="lang-dropdown">
+                    <button class="lang-dropdown-btn">
+                        Français
+                        <span class="lang-dropdown-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown-menu">
+                        <a href="../fr/purchase.html" class="lang-dropdown-item current">Français</a>
+                        <a href="../en/purchase.html" class="lang-dropdown-item">English</a>
+                        <a href="../ja/purchase.html" class="lang-dropdown-item">日本語</a>
+                        <a href="../ar/purchase.html" class="lang-dropdown-item">العربية</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="purchase-hero">
+            <div class="container">
+                <div class="intro-content-premium">
+                    <div class="intro-main">
+                        <h1 class="intro-title-premium">
+                            <span class="title-accent">M</span><span class="title-main">ASU</span><span class="title-accent">K</span><span class="title-main">AME</span>
+                        </h1>
+                        
+                        <div class="intro-subtitle-container">
+                            <div class="subtitle-line left"></div>
+                            <p class="intro-tagline-premium">
+                                Une œuvre d'art spéciale qui porte bonheur.
+                            </p>
+                            <div class="subtitle-line right"></div>
+                        </div>
+                        
+                        <div class="intro-description-premium">
+                            <p class="description-primary">
+                                Une œuvre d'art sur commande qui fusionne l'artisanat japonais traditionnel "Masu" avec la tortue, symbolisant longévité et prospérité.
+                            </p>
+                            <p class="description-secondary">
+                                Chaque pièce est individuellement conçue par artisans et artistes, bien reçue comme décoration intérieure et cadeau.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Background Pattern -->
+                    <div class="intro-pattern">
+                        <div class="pattern-element pattern-1"></div>
+                        <div class="pattern-element pattern-2"></div>
+                        <div class="pattern-element pattern-3"></div>
+                        <div class="pattern-element pattern-4"></div>
+                        <div class="pattern-element pattern-5"></div>
+                        <div class="pattern-element pattern-6"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Classic Edition Section -->
+        <section class="product-section">
+            <div class="container">
+                <div class="product-card">
+                    <div class="product-grid">
+                        <!-- Left Side - Product Image -->
+                        <div class="product-image-container">
+                            <div class="product-image">
+                                <img src="../assets/edition-classic.jpg" alt="MASUKAME Édition Classique">
+                            </div>
+                        </div>
+                        
+                        <!-- Right Side - Product Info -->
+                        <div class="product-info">
+                            <div>
+                                <h2 class="edition-title">Édition Classique</h2>
+                                <p class="edition-subtitle">Sur commande</p>
+                            </div>
+                            
+                            <div class="price-container">
+                                <p class="main-price">
+                                    $3,000 USD
+                                </p>
+                            </div>
+                            
+                            <div class="product-description">
+                                <p class="description-main">
+                                    Le modèle de base de MASUKAME, simple et beau, créé par production complète sur commande.
+                                </p>
+                                <p class="description-note">
+                                    Chaque pièce est livrée avec un numéro de série unique et un certificat d'authenticité papier signé.
+                                </p>
+                            </div>
+                            
+                            <div class="features-box">
+                                <h4 class="features-title">Caractéristiques Clés</h4>
+                                <ul class="features-list">
+                                    <li>Fabriqué en cyprès hinoki japonais</li>
+                                    <li>Fait à la main par artisans traditionnels</li>
+                                    <li>Numéro de série unique gravé sur chaque pièce</li>
+                                    <li>Certificat d'authenticité papier signé</li>
+                                    <li>Choix de finition huile ou uréthane</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="purchase-button">
+                                <a href="https://buy.stripe.com/7sY14o7V38nX4C04zV4ko0v" class="btn primary large" target="_blank" rel="noopener noreferrer">Acheter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Flow Section -->
+        <section class="order-flow-section">
+            <div class="container">
+                <div class="flow-header">
+                    <h2 class="flow-title">Processus de Commande</h2>
+                    <p class="flow-subtitle">
+                        (Paiement intégral requis à l'avance)
+                    </p>
+                </div>
+                
+                <!-- Order Flow Steps -->
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Demande de Commande</h4>
+                            <p>Nous acceptons les commandes par email ou en ligne</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Confirmation de Paiement</h4>
+                            <p>La production commence officiellement après confirmation du paiement</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Début de Production</h4>
+                            <p>Chaque pièce est soigneusement fabriquée à la main par des artisans japonais</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Livraison</h4>
+                            <p>Temps de production : 6-8 semaines (expédition assurée mondiale)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-section">
+                    <h3 class="contact-title">Contactez-Nous</h3>
+                    <p class="contact-description">
+                        Pour les questions sur MASUKAME ou pour passer commande,<br>
+                        n'hésitez pas à nous contacter en utilisant les boutons ci-dessous.
+                    </p>
+                    <div class="contact-buttons">
+                        <a href="mailto:fomus.official@gmail.com?subject=Demande MASUKAME&body=Veuillez saisir votre demande ici." class="btn secondary">
+                            Demande Générale
+                        </a>
+                        <a href="mailto:fomus.official@gmail.com?subject=Demande d'Achat MASUKAME&body=Je suis intéressé(e) par l'achat de MASUKAME. Veuillez fournir les détails." class="btn primary">
+                            Acheter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <h4>MASUKAME</h4>
+                    <p>Sculpture luxueuse en bois sur commande<br>fusionnant Masu (prospérité) et Kame (longévité)</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/masukame_official/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:fomus.official@gmail.com">fomus.official@gmail.com</a></li>
+                        <li><a href="./purchase.html">Acheter</a></li>
+                        <li><a href="./story.html">Histoire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Informations Légales</h4>
+                    <ul>
+                        <li><a href="./terms.html">Conditions de Service</a></li>
+                        <li><a href="./privacy.html">Politique de Confidentialité</a></li>
+                        <li>Retours & Remboursements</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="currency">Tous les prix sont affichés en USD.</p>
+                <p class="copyright">&copy; <span id="year">2025</span> MASUKAME. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+</body>
+</html>
