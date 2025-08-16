@@ -4,23 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MASUKAME - Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=./ja/index.html">
+    <meta http-equiv="refresh" content="0; url=./en/index.html">
     <script type="text/javascript">
-        // Browser language detection and redirect
-        const browserLang = navigator.language || navigator.userLanguage;
-        const lang = browserLang.toLowerCase().substring(0, 2);
-        
-        // Redirect based on browser language
-        if (lang === 'ja') {
-            window.location.href = './ja/index.html';
-        } else if (lang === 'ar') {
-            window.location.href = './ar/index.html';
-        } else if (lang === 'fr') {
-            window.location.href = './fr/index.html';
-        } else {
-            // Default to English for all other languages
-            window.location.href = './en/index.html';
-        }
+        // Default to English
+        window.location.href = './en/index.html';
     </script>
 </head>
 <body>
