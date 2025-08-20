@@ -417,13 +417,7 @@ function toggleMobileMenu() {
     
     if (nav) {
         nav.classList.toggle('mobile-open');
-        
-        // Change hamburger icon to X when open
-        if (nav.classList.contains('mobile-open')) {
-            toggleBtn.innerHTML = '<span class="hamburger-icon">✕</span>';
-        } else {
-            toggleBtn.innerHTML = '<span class="hamburger-icon">☰</span>';
-        }
+        toggleBtn.classList.toggle('active');
     }
 }
 
