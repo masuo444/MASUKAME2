@@ -122,7 +122,10 @@
     <header>
         <div class="container">
             <a href="./index.html" class="logo">MASUKAME</a>
-            <nav>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span class="hamburger-icon">☰</span>
+            </button>
+            <nav id="mobile-nav">
                 <a href="./index.html">ホーム</a>
                 <a href="./story.html">ストーリー</a>
                 <a href="./purchase.html">購入</a>
@@ -176,17 +179,17 @@
                     <div class="card" data-animate="fade-up">
                         <div class="card-icon">🌸</div>
                         <h3>檜の精神</h3>
-                        <p>細かな木目、優しい香り、伝統的な意味を持つ日本産檜を厳選。丁寧な職人技により、木の自然な美しさを引き出しています。</p>
+                        <p>日本産檜を厳選、職人が丁寧に仕上げます。</p>
                     </div>
                     <div class="card" data-animate="fade-up">
                         <div class="card-icon">⚱️</div>
                         <h3>吉祥のデザイン</h3>
-                        <p>枡（繁栄）と亀（長寿）のモチーフを調和的に融合。幾何学的形態と有機的彫刻の思慮深いバランスが日本の文化遺産を体現。</p>
+                        <p>枡（繁栄）と亀（長寿）を美しく融合。</p>
                     </div>
                     <div class="card" data-animate="fade-up">
                         <div class="card-icon">📜</div>
                         <h3>特別な制作</h3>
-                        <p>各MASUKAMEは注文後に個別制作。手書き署名入りの紙の真正性証明書と固有のシリアル番号で来歴を保証。</p>
+                        <p>注文後に個別制作、シリアルナンバー付き。</p>
                     </div>
                 </div>
                 <div class="gallery-cta">
@@ -201,7 +204,7 @@
                 <div class="gallery-slideshow">
                     <div class="slideshow-container">
                         <div class="slide active">
-                            <img src="../images/スライドショー１.JPG" alt="MASUKAME制作工程 - 檜の選別" loading="lazy">
+                            <img src="../images/スライドショー１.JPG" alt="MASUKAME制作工程 - 檜の選別" loading="eager">
                         </div>
                         <div class="slide">
                             <img src="../images/スライドショー２.jpg" alt="MASUKAME制作工程 - 精密な手彫り作業" loading="lazy">

@@ -410,6 +410,23 @@ function initAutoSlideshow() {
     }, 5000); // Change slide every 5 seconds
 }
 
+// Mobile menu toggle functionality
+function toggleMobileMenu() {
+    const nav = document.getElementById('mobile-nav');
+    const toggleBtn = document.querySelector('.mobile-menu-toggle');
+    
+    if (nav) {
+        nav.classList.toggle('mobile-open');
+        
+        // Change hamburger icon to X when open
+        if (nav.classList.contains('mobile-open')) {
+            toggleBtn.innerHTML = '<span class="hamburger-icon">✕</span>';
+        } else {
+            toggleBtn.innerHTML = '<span class="hamburger-icon">☰</span>';
+        }
+    }
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     // Update CTAs based on date
