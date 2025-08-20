@@ -1016,6 +1016,8 @@ header nav a.active::before {
     height: 400px;
     object-fit: cover;
     display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
 }
 
 .slide-btn {
