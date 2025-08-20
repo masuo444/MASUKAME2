@@ -2016,10 +2016,28 @@ footer nav a.active::after {
     /* Gallery Slideshow Mobile */
     .gallery-slideshow {
         margin: 1.5rem 0;
+        padding: 0;
+    }
+
+    .slideshow-container {
+        border-radius: 8px;
+        margin: 0;
     }
 
     .slide img {
         height: 250px;
+    }
+
+    /* About MASUKAME section mobile optimization */
+    .story h2 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 24px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .slide-btn {
