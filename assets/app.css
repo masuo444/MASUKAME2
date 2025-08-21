@@ -2058,10 +2058,18 @@ footer nav a.active::after {
     .slideshow-container {
         border-radius: 8px;
         margin: 0;
+        height: auto;
+    }
+
+    .slide {
+        height: auto;
     }
 
     .slide img {
-        height: 250px;
+        height: auto;
+        max-height: 300px;
+        width: 100%;
+        object-fit: contain;
     }
 
     /* About MASUKAME section mobile optimization */
