@@ -2071,9 +2071,9 @@ footer nav a.active::after {
         margin-bottom: 24px;
         text-align: center;
         letter-spacing: 0.02em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal;
+        word-wrap: break-word;
+        hyphens: auto;
     }
 
     .slide-btn {
