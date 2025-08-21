@@ -42,8 +42,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/app.css">
+    <link rel="preload" href="../assets/app.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../assets/app.css"></noscript>
     <link rel="preload" href="../assets/hero-new.jpg" as="image" fetchpriority="high">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",

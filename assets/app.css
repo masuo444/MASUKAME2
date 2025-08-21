@@ -51,6 +51,22 @@ body {
     }
 }
 
+/* Performance optimizations */
+* {
+    will-change: auto;
+}
+
+img {
+    content-visibility: auto;
+    contain-intrinsic-size: 400px 300px;
+}
+
+/* Critical resource hints */
+link[rel="preload"] {
+    as: image;
+    fetchpriority: high;
+}
+
 @keyframes slideDown {
     from {
         opacity: 0;
@@ -2014,6 +2030,8 @@ footer nav a.active::after {
     .grid,
     .flow {
         margin: 1.5rem 0;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
     }
 
     .gallery-cta {
@@ -2074,8 +2092,8 @@ footer nav a.active::after {
 
     /* Cards */
     .card {
-        padding: 24px 20px;
-        margin-bottom: 20px;
+        padding: 20px 16px;
+        margin-bottom: 0;
     }
 
     .card-icon {
